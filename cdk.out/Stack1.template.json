@@ -1,0 +1,26 @@
+{
+  "Resources": {
+    "ZoneA5DE4B68": {
+      "Type": "AWS::Route53::HostedZone",
+      "Properties": {
+        "Name": "test.com."
+      },
+      "Metadata": {
+        "aws:cdk:path": "Stack1/Zone/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "ExportsOutputFnGetAttZoneA5DE4B68NameServersD2CE5CCE": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ZoneA5DE4B68",
+          "NameServers"
+        ]
+      },
+      "Export": {
+        "Name": "Stack1:ExportsOutputFnGetAttZoneA5DE4B68NameServersD2CE5CCE"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "Outputs": {
+    "DnsEntry": {
+      "Value": {
+        "Fn::Select": [
+          0,
+          {
+            "Fn::ImportValue": "Stack1:ExportsOutputFnGetAttZoneA5DE4B68NameServersD2CE5CCE"
+          }
+        ]
+      }
+    }
+  }
+}

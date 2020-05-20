@@ -1,0 +1,55 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "Stack1": {
+        "id": "Stack1",
+        "path": "Stack1",
+        "children": {
+          "Zone": {
+            "id": "Zone",
+            "path": "Stack1/Zone",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Stack1/Zone/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::HostedZone",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "test.com."
+                  }
+                }
+              }
+            }
+          },
+          "Exports": {
+            "id": "Exports",
+            "path": "Stack1/Exports",
+            "children": {
+              "Output{\"Fn::GetAtt\":[\"ZoneA5DE4B68\",\"NameServers\"]}": {
+                "id": "Output{\"Fn::GetAtt\":[\"ZoneA5DE4B68\",\"NameServers\"]}",
+                "path": "Stack1/Exports/Output{\"Fn::GetAtt\":[\"ZoneA5DE4B68\",\"NameServers\"]}"
+              }
+            }
+          }
+        }
+      },
+      "Stack2": {
+        "id": "Stack2",
+        "path": "Stack2",
+        "children": {
+          "DnsEntry": {
+            "id": "DnsEntry",
+            "path": "Stack2/DnsEntry"
+          }
+        }
+      }
+    }
+  }
+}
